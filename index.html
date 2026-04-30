@@ -138,16 +138,16 @@
     text-transform: uppercase;
   }
   .instructor-avatar {
-    width: 60px; height: 60px;
+    width: 90px; height: 90px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #2a4a6e, #3a6a9e);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px;
-    font-family: 'EB Garamond', serif;
-    color: var(--gold-light);
     margin-bottom: 12px;
     border: 2px solid rgba(200,151,58,0.4);
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+    background: #1c2e42;
   }
+
   .instructor-name {
     font-family: 'EB Garamond', serif;
     font-size: 20px;
@@ -465,7 +465,7 @@
     <div>
       <div class="instructor-card">
         <h3>Instructor</h3>
-        <div class="instructor-avatar">[XX]</div>
+        <img class="instructor-avatar" src="images/VedantDave.jpg" alt="Instructor photo">
         <div class="instructor-name">Vedant Dave</div>
         <div class="instructor-title">Senior Researcher</div>
         <div class="instructor-links">

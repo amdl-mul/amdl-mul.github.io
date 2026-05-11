@@ -22,428 +22,245 @@
   }
 
   html { scroll-behavior: smooth; }
+  body { font-family: 'Instrument Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
 
-  body {
-    font-family: 'Instrument Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    line-height: 1.6;
-  }
-
-  /* ── TOP STRIPE ── */
   .institution-bar {
-    background: var(--navy);
-    color: #aab8c8;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    padding: 8px 40px;
-    display: flex;
-    gap: 24px;
-    align-items: center;
+    background: var(--navy); color: #aab8c8;
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em;
+    padding: 8px 40px; display: flex; gap: 24px; align-items: center;
   }
   .institution-bar span { color: var(--gold); }
 
-  /* ── NAV ── */
   nav {
-    background: var(--navy);
-    padding: 0 40px;
-    border-bottom: 2px solid var(--gold);
-    display: flex;
-    align-items: center;
-    gap: 0;
+    background: var(--navy); padding: 0 40px; border-bottom: 2px solid var(--gold);
+    display: flex; align-items: center; gap: 0;
   }
   .nav-logo {
-    font-family: 'EB Garamond', serif;
-    font-size: 22px;
-    color: #fff;
-    padding: 16px 0;
-    margin-right: auto;
-    letter-spacing: -0.01em;
+    font-family: 'EB Garamond', serif; font-size: 22px; color: #fff;
+    padding: 16px 0; margin-right: auto; letter-spacing: -0.01em;
   }
   .nav-logo em { color: var(--gold); font-style: normal; }
   nav a {
-    color: #aab8c8;
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 0.04em;
-    padding: 20px 16px;
-    display: block;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
-    transition: color 0.15s, border-color 0.15s;
+    color: #aab8c8; text-decoration: none; font-size: 13px; letter-spacing: 0.04em;
+    padding: 20px 16px; display: block; border-bottom: 2px solid transparent;
+    margin-bottom: -2px; transition: color 0.15s, border-color 0.15s;
   }
   nav a:hover { color: #fff; border-color: var(--gold); }
   nav a.active { color: #fff; border-color: var(--gold-light); }
 
-  /* ── HERO ── */
   .hero {
-    background: var(--navy);
-    padding: 64px 40px 56px;
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 48px;
-    align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
+    background: var(--navy); padding: 64px 40px 56px;
+    display: grid; grid-template-columns: 1fr 320px; gap: 48px;
+    align-items: start; max-width: 1200px; margin: 0 auto;
   }
   @media (max-width: 800px) { .hero { grid-template-columns: 1fr; padding: 40px 24px; } }
-  .course-code {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: var(--gold);
-    letter-spacing: 0.12em;
-    margin-bottom: 12px;
-  }
-  .hero h1 {
-    font-family: 'EB Garamond', serif;
-    font-size: 52px;
-    font-weight: 400;
-    color: #fff;
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-  }
+  .course-code { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--gold); letter-spacing: 0.12em; margin-bottom: 12px; }
+  .hero h1 { font-family: 'EB Garamond', serif; font-size: 52px; font-weight: 400; color: #fff; line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 20px; }
   .hero h1 em { color: var(--gold-light); font-style: italic; }
-  .hero-desc {
-    color: #aab8c8;
-    font-size: 16px;
-    line-height: 1.7;
-    max-width: 560px;
-    margin-bottom: 32px;
-  }
+  .hero-desc { color: #aab8c8; font-size: 16px; line-height: 1.7; max-width: 560px; margin-bottom: 32px; }
   .meta-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-  .pill {
-    background: rgba(200,151,58,0.15);
-    border: 1px solid rgba(200,151,58,0.35);
-    color: var(--gold-light);
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    padding: 5px 14px;
-    border-radius: 2px;
-  }
-  .instructor-card {
-    background: var(--navy-mid);
-    border: 1px solid rgba(200,151,58,0.3);
-    border-radius: 4px;
-    padding: 24px;
-  }
-  .instructor-card h3 {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    color: var(--gold);
-    margin-bottom: 16px;
-    text-transform: uppercase;
-  }
-  .instructor-avatar {
-    width: 90px; height: 90px;
-    border-radius: 50%;
-    margin-bottom: 12px;
-    border: 2px solid rgba(200,151,58,0.4);
-    object-fit: cover;
-    object-position: center 35%;
-    display: block;
-    background: #1c2e42;
-  }
+  .pill { background: rgba(200,151,58,0.15); border: 1px solid rgba(200,151,58,0.35); color: var(--gold-light); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.06em; padding: 5px 14px; border-radius: 2px; }
 
-  .instructor-name {
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 4px;
-  }
+  .instructor-card { background: var(--navy-mid); border: 1px solid rgba(200,151,58,0.3); border-radius: 4px; padding: 24px; }
+  .instructor-card h3 { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 16px; text-transform: uppercase; }
+  .instructor-avatar { width: 110px; height: 110px; border-radius: 50%; margin-bottom: 12px; border: 2px solid rgba(200,151,58,0.4); object-fit: cover; object-position: center 20%; display: block; background: #1c2e42; }
+  .instructor-name { font-family: 'EB Garamond', serif; font-size: 20px; color: #fff; margin-bottom: 4px; }
   .instructor-title { color: #aab8c8; font-size: 13px; margin-bottom: 16px; }
   .instructor-links { display: flex; flex-direction: column; gap: 6px; }
-  .instructor-links a {
-    color: var(--gold-light);
-    font-size: 12px;
-    font-family: 'DM Mono', monospace;
-    text-decoration: none;
-  }
+  .instructor-links a { color: var(--gold-light); font-size: 12px; font-family: 'DM Mono', monospace; text-decoration: none; }
   .instructor-links a:hover { text-decoration: underline; }
 
-  /* ── MAIN LAYOUT ── */
-  .page-body {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 48px 40px;
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 48px;
-    align-items: start;
-  }
+  .page-body { max-width: 1200px; margin: 0 auto; padding: 48px 40px; display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: start; }
   @media (max-width: 800px) { .page-body { grid-template-columns: 1fr; padding: 32px 24px; } }
 
-  /* ── SECTION HEADINGS ── */
-  .section-heading {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .section-heading::after { content: ''; flex: 1; height: 1px; background: var(--border); display: none; }
+  .section-heading { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
 
-  /* ── ANNOUNCEMENT BANNER ── */
-  .announcement {
-    background: #fff8ee;
-    border-left: 3px solid var(--gold);
-    padding: 14px 18px;
-    border-radius: 0 4px 4px 0;
-    margin-bottom: 36px;
-    font-size: 14px;
-  }
+  .announcement { background: #fff8ee; border-left: 3px solid var(--gold); padding: 14px 18px; border-radius: 0 4px 4px 0; margin-bottom: 36px; font-size: 14px; }
   .announcement strong { color: var(--red-accent); }
 
-  /* ── SCHEDULE TABLE ── */
-  .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    margin-bottom: 48px;
-  }
-  .schedule-table th {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    text-align: left;
-    padding: 8px 12px;
-    border-bottom: 2px solid var(--navy);
-    background: var(--cream-dark);
-    text-transform: uppercase;
-  }
-  .schedule-table td {
-    padding: 12px 12px;
-    border-bottom: 1px solid var(--border);
-    vertical-align: top;
-  }
+  .schedule-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 48px; }
+  .schedule-table th { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--text-muted); text-align: left; padding: 8px 12px; border-bottom: 2px solid var(--navy); background: var(--cream-dark); text-transform: uppercase; }
+  .schedule-table td { padding: 12px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
   .schedule-table tr:hover td { background: rgba(255,255,255,0.7); }
-  .week-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-    white-space: nowrap;
-  }
+  .week-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
   .lecture-title { font-weight: 500; color: var(--navy); line-height: 1.4; }
   .lecture-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-  .tag {
-    display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.04em;
-    padding: 2px 8px;
-    border-radius: 2px;
-    border: 1px solid;
-    white-space: nowrap;
-  }
+  .tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 2px; border: 1px solid; white-space: nowrap; }
   .tag-lecture { background: #e8f0fb; border-color: #c0d4f4; color: #1a4a8a; }
-  .tag-lab { background: #edf7ee; border-color: #b8deba; color: #1a5c25; }
-  .tag-exam { background: #fbeae8; border-color: #f4c0bb; color: #8a2a1a; }
   .tag-project { background: #fdf3e3; border-color: #f0d9aa; color: #8a5a10; }
 
-  /* ── MATERIALS LINKS ── */
   .materials-links { display: flex; gap: 6px; flex-wrap: wrap; }
-  .mat-link {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: var(--navy);
-    text-decoration: none;
-    border: 1px solid var(--border);
-    padding: 2px 8px;
-    border-radius: 2px;
-    background: #fff;
-  }
+  .mat-link { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--navy); text-decoration: none; border: 1px solid var(--border); padding: 2px 8px; border-radius: 2px; background: #fff; }
   .mat-link:hover { background: var(--navy); color: var(--gold-light); border-color: var(--navy); }
-  .mat-link.disabled { color: var(--text-muted); cursor: not-allowed; background: var(--cream-dark); }
+  .mat-link.disabled { color: var(--text-muted); cursor: not-allowed; background: var(--cream-dark); pointer-events: none; }
 
-  /* ── SIDEBAR ── */
   .sidebar > * { margin-bottom: 32px; }
-
-  .sidebar-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .sidebar-card-header {
-    background: var(--navy);
-    padding: 12px 16px;
-  }
-  .sidebar-card-header h3 {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    color: var(--gold-light);
-    text-transform: uppercase;
-  }
+  .sidebar-card { background: #fff; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .sidebar-card-header { background: var(--navy); padding: 12px 16px; }
+  .sidebar-card-header h3 { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: var(--gold-light); text-transform: uppercase; }
   .sidebar-card-body { padding: 16px; }
-  .info-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    padding: 6px 0;
-    border-bottom: 1px solid var(--cream-dark);
-    gap: 12px;
-  }
+  .info-row { display: flex; justify-content: space-between; font-size: 13px; padding: 6px 0; border-bottom: 1px solid var(--cream-dark); gap: 12px; }
   .info-row:last-child { border-bottom: none; }
   .info-label { color: var(--text-muted); flex-shrink: 0; }
   .info-value { font-weight: 500; text-align: right; }
 
-  /* ── PREREQUISITES ── */
   .prereq-list { list-style: none; }
-  .prereq-list li {
-    font-size: 13px;
-    padding: 7px 0;
-    border-bottom: 1px solid var(--cream-dark);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text);
-  }
-  .prereq-list li::before {
-    content: '';
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-    flex-shrink: 0;
-  }
+  .prereq-list li { font-size: 13px; padding: 7px 0; border-bottom: 1px solid var(--cream-dark); display: flex; align-items: center; gap: 8px; }
+  .prereq-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
   .prereq-list li:last-child { border-bottom: none; }
 
-  /* ── OFFICE HOURS ── */
-  .oh-row {
-    font-size: 13px;
-    padding: 7px 0;
-    border-bottom: 1px solid var(--cream-dark);
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 8px;
-  }
-  .oh-row:last-child { border-bottom: none; }
-  .oh-day { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-muted); }
-  .oh-time { font-size: 12px; }
-
-  /* ── GRADING ── */
-  .grade-bar-wrap {
-    margin-bottom: 12px;
-  }
-  .grade-label {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    margin-bottom: 5px;
-  }
+  .grade-bar-wrap { margin-bottom: 12px; }
+  .grade-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 5px; }
   .grade-pct { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text-muted); }
-  .grade-bar {
-    height: 6px;
-    background: var(--cream-dark);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .grade-bar-fill {
-    height: 100%;
-    border-radius: 2px;
-    background: var(--navy);
-  }
+  .grade-bar { height: 6px; background: var(--cream-dark); border-radius: 2px; overflow: hidden; }
+  .grade-bar-fill { height: 100%; border-radius: 2px; }
 
-  /* ── TEXTBOOKS ── */
-  .book-item {
-    display: flex;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--cream-dark);
-    font-size: 13px;
-  }
+  .book-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--cream-dark); font-size: 13px; }
   .book-item:last-child { border-bottom: none; }
-  .book-spine {
-    width: 8px;
-    border-radius: 1px;
-    flex-shrink: 0;
-    align-self: stretch;
-  }
+  .book-spine { width: 8px; border-radius: 1px; flex-shrink: 0; align-self: stretch; }
   .book-info-title { font-weight: 500; line-height: 1.4; margin-bottom: 2px; }
   .book-authors { color: var(--text-muted); font-size: 12px; }
-  .book-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    margin-top: 4px;
-  }
+  .book-label { font-family: 'DM Mono', monospace; font-size: 10px; margin-top: 4px; }
 
-  /* ── COURSE OVERVIEW ── */
-  .overview-text {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-    line-height: 1.75;
-    color: #2a2a2a;
-    margin-bottom: 32px;
-  }
-  .topic-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin-bottom: 40px;
-  }
-  .topic-card {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 16px;
-    border-top: 3px solid var(--navy);
-  }
-  .topic-card h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: var(--navy);
-  }
+  .overview-text { font-family: 'EB Garamond', serif; font-size: 18px; line-height: 1.75; color: #2a2a2a; margin-bottom: 32px; }
+  .topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 40px; }
+  .topic-card { background: #fff; border: 1px solid var(--border); border-radius: 4px; padding: 16px; border-top: 3px solid var(--navy); }
+  .topic-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; color: var(--navy); }
   .topic-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-  /* ── FOOTER ── */
-  footer {
+  /* ── EVALUATION ── */
+  .eval-summary {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+  .eval-score-badge {
+    flex-shrink: 0;
     background: var(--navy);
+    border: 1px solid rgba(200,151,58,0.35);
+    border-radius: 6px;
+    padding: 18px 22px;
+    text-align: center;
+    min-width: 110px;
+  }
+  .eval-score-num {
+    font-family: 'EB Garamond', serif;
+    font-size: 52px;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .eval-score-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
     color: #aab8c8;
-    font-size: 12px;
-    padding: 32px 40px;
-    margin-top: 64px;
+    letter-spacing: 0.06em;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .eval-desc {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    padding-top: 4px;
+  }
+  .eval-desc strong { color: var(--text); }
+
+  .eval-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .eval-card-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .eval-avg-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    background: var(--navy);
+    color: var(--gold-light);
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-weight: 400;
+  }
+
+  .eval-bar-track {
+    height: 38px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .eval-bar-seg {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    transition: opacity 0.15s;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .eval-bar-seg:hover { opacity: 0.85; cursor: default; }
+  .seg-1 { background: #2a7abf; }
+  .seg-2 { background: #e07b1a; }
+  .seg-3 { background: #3a9a4a; }
+  .seg-4 { background: #cc3a2a; }
+
+  .eval-legend {
+    display: flex;
+    gap: 20px;
     flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  .eval-note { font-size: 12px; color: var(--text-muted); margin-top: 16px; font-style: italic; }
+
+  footer {
+    background: var(--navy); color: #aab8c8; font-size: 12px; padding: 32px 40px;
+    margin-top: 64px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
   }
   .footer-left { font-family: 'EB Garamond', serif; font-size: 16px; color: #fff; }
   .footer-left small { display: block; font-family: 'Instrument Sans', sans-serif; font-size: 12px; color: #aab8c8; margin-top: 2px; }
+  footer nav { display: flex; gap: 20px; }
   footer nav a { color: #aab8c8; text-decoration: none; padding: 4px 0; }
   footer nav a:hover { color: var(--gold-light); }
-  footer nav { display: flex; gap: 20px; }
 </style>
 </head>
 <body>
 
-<!-- Institution Bar -->
 <div class="institution-bar">
   <span>Technical University of Leoben</span>
   &nbsp;·&nbsp; Chair of Cyber-Physical-Systems
   &nbsp;·&nbsp; 2025/26
 </div>
 
-<!-- Navigation -->
 <nav>
   <div class="nav-logo"><em>CPS</em></div>
   <a href="#overview" class="active">Overview</a>
   <a href="#schedule">Schedule</a>
   <a href="#resources">Resources</a>
+  <a href="#evaluation">Evaluation</a>
 </nav>
 
-<!-- Hero -->
 <div style="background: var(--navy);">
   <div class="hero">
     <div>
@@ -458,10 +275,9 @@
         <span class="pill">6 CREDITS</span>
         <span class="pill">GRADUATE LEVEL</span>
         <span class="pill">IN-PERSON</span>
-        <span class="pill">TUE / THU · 10:00-12:00 · SR HDD [22]</span>
+        <span class="pill">TUE / THU · 10:00–12:00 · SR HDD [22]</span>
       </div>
     </div>
-
     <div>
       <div class="instructor-card">
         <h3>Instructor</h3>
@@ -469,7 +285,7 @@
         <div class="instructor-name">Vedant Dave</div>
         <div class="instructor-title">Senior Researcher</div>
         <div class="instructor-links">
-          <a href="vedant.dave@unileoben.ac.at">✉ vedant.dave@unileoben.ac.at</a>
+          <a href="mailto:vedant.dave@unileoben.ac.at">✉ vedant.dave@unileoben.ac.at</a>
           <a href="https://vedantdave97.github.io/">⟶ Personal / Lab Website</a>
           <a href="#">⟶ Office: Roseggerstraße 11, Leoben</a>
         </div>
@@ -478,18 +294,13 @@
   </div>
 </div>
 
-<!-- Page Body -->
 <div class="page-body">
-
-  <!-- Main Column -->
   <main>
 
-    <!-- Announcement -->
     <div class="announcement" id="overview">
-      <strong>Notice:</strong> Lecture slides are released before every lecture in the morning. 
+      <strong>Notice:</strong> Lecture slides are released before every lecture in the morning.
     </div>
 
-    <!-- Overview -->
     <div class="section-heading" style="margin-bottom: 16px;">Course Description</div>
     <p class="overview-text">
       This course offers a graduate-level exploration of the mathematical and 
@@ -503,10 +314,10 @@
     <div class="topic-grid">
       <div class="topic-card">
         <h4>ML Foundations</h4>
-        <p>Bias-variance tradeoff, hypothesis space, evaluation metrics, MLE, MAP estimation, probability distributions, KL divergence & information-theoretic measures</p>
+        <p>Bias-variance tradeoff, hypothesis space, evaluation metrics, MLE, MAP estimation, probability distributions, KL divergence &amp; information-theoretic measures</p>
       </div>
       <div class="topic-card">
-        <h4>Neural Networks & Optimization</h4>
+        <h4>Neural Networks &amp; Optimization</h4>
         <p>FFNs, expressivity, activation functions, SGD, momentum, Nesterov, Adam, LR scheduling, gradient clipping</p>
       </div>
       <div class="topic-card">
@@ -519,323 +330,196 @@
       </div>
     </div>
 
-    <!-- Schedule -->
     <div class="section-heading" id="schedule">Lecture Schedule</div>
     <table class="schedule-table">
       <thead>
-        <tr>
-          <th>Week</th>
-          <th>Date</th>
-          <th>Topic</th>
-          <th>Type</th>
-          <th>Materials</th>
-        </tr>
+        <tr><th>Week</th><th>Date</th><th>Topic</th><th>Type</th><th>Materials</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td class="week-num">01</td>
-          <td class="week-num">07.10.2025</td>
-          <td>
-            <div class="lecture-title">Basics of Machine Learning - Part I</div>
-            <div class="lecture-subtitle">Neural fight, reinforcement learning, sequential models, generative models</div>
-          </td>
+          <td class="week-num">01</td><td class="week-num">07.10.2025</td>
+          <td><div class="lecture-title">Basics of Machine Learning — Part I</div><div class="lecture-subtitle">Neural networks overview, reinforcement learning, sequential models, generative models</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/NMDgyp3qBoL39ga">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/NMDgyp3qBoL39ga">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">01</td>
-          <td class="week-num">09.10.2025</td>
-          <td>
-            <div class="lecture-title">Basics of Machine Learning - Part II</div>
-            <div class="lecture-subtitle">Bias-variance tradeoff, hypothesis space, evaluation metrics</div>
-          </td>
+          <td class="week-num">01</td><td class="week-num">09.10.2025</td>
+          <td><div class="lecture-title">Basics of Machine Learning — Part II</div><div class="lecture-subtitle">Bias-variance tradeoff, hypothesis space, evaluation metrics</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/9AaZHa8EnLkg4p8">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/9AaZHa8EnLkg4p8">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">02</td>
-          <td class="week-num">14.10.2025</td>
-          <td>
-            <div class="lecture-title">Statistical Approaches in Machine Learning - Part I</div>
-            <div class="lecture-subtitle">Estimators, MLE, MAP, distributions</div>
-          </td>
+          <td class="week-num">02</td><td class="week-num">14.10.2025</td>
+          <td><div class="lecture-title">Statistical Approaches in ML — Part I</div><div class="lecture-subtitle">Estimators, MLE, MAP, distributions</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/zxW6iYnbXGx5i4R">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/zxW6iYnbXGx5i4R">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">03</td>
-          <td class="week-num">28.10.2025</td>
-          <td>
-            <div class="lecture-title">Statistical Approaches in Machine Learning - Part II</div>
-            <div class="lecture-subtitle">Divergences</div>
-          </td>
+          <td class="week-num">03</td><td class="week-num">28.10.2025</td>
+          <td><div class="lecture-title">Statistical Approaches in ML — Part II</div><div class="lecture-subtitle">Divergences</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/ynoqYfxiiGzqaMX">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/ynoqYfxiiGzqaMX">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">03</td>
-          <td class="week-num">28.10.2025</td>
-          <td>
-            <div class="lecture-title">Assignment I — Statistical Learning Foundations</div>
-          </td>
+          <td class="week-num">03</td><td class="week-num">28.10.2025</td>
+          <td><div class="lecture-title">Assignment I — Statistical Learning Foundations</div></td>
           <td><span class="tag tag-project">Assignment</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="#">PDF</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="#">PDF</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">03</td>
-          <td class="week-num">28.10.2025</td>
-          <td>
-            <div class="lecture-title">Neural Networks - Part I</div>
-            <div class="lecture-subtitle">FFNs, expressivity, activation functions, gradient descent</div>
-          </td>
+          <td class="week-num">03</td><td class="week-num">28.10.2025</td>
+          <td><div class="lecture-title">Neural Networks — Part I</div><div class="lecture-subtitle">FFNs, expressivity, activation functions, gradient descent</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/XpyFdmdF7H9cWXF">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/XpyFdmdF7H9cWXF">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">03</td>
-          <td class="week-num">30.10.2025</td>
-          <td>
-            <div class="lecture-title">Neural Networks - Part II</div>
-            <div class="lecture-subtitle">Gradient descent, neural network architecture</div>
-          </td>
+          <td class="week-num">03</td><td class="week-num">30.10.2025</td>
+          <td><div class="lecture-title">Neural Networks — Part II</div><div class="lecture-subtitle">Gradient descent, neural network architecture</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/rMwegzYR6izoRD2">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/rMwegzYR6izoRD2">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">04</td>
-          <td class="week-num">04.11.2025</td>
-          <td>
-            <div class="lecture-title">Gradient Descent Methods</div>
-            <div class="lecture-subtitle">GD, SGD, momentum-based GD, nesterov-accelerated GD, 
-                LR sheduling, adaptive LR methods, gradient clipping</div>
-          </td>
+          <td class="week-num">04</td><td class="week-num">04.11.2025</td>
+          <td><div class="lecture-title">Gradient Descent Methods</div><div class="lecture-subtitle">GD, SGD, momentum-based GD, Nesterov-accelerated GD, LR scheduling, adaptive LR methods, gradient clipping</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/J76Kpt8xKe3A6t4">Slides</a>
-              <a class="mat-link disabled" href="https://cloud.cps.unileoben.ac.at/index.php/s/LQ4LeyNqop5eSp6">Animations</a>
-              <a class="mat-link disabled" href="https://cloud.cps.unileoben.ac.at/index.php/s/Sx9G2RbLZS993L9">Code</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/J76Kpt8xKe3A6t4">Slides</a><a class="mat-link disabled">Animations</a><a class="mat-link disabled">Code</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">05</td>
-          <td class="week-num">06.11.2025</td>
-          <td>
-            <div class="lecture-title">Convolutional Neural Networks - Part I</div>
-            <div class="lecture-subtitle">Convolution operator, kernels, CNNs, hiererchy</div>
-          </td>
+          <td class="week-num">05</td><td class="week-num">06.11.2025</td>
+          <td><div class="lecture-title">Convolutional Neural Networks — Part I</div><div class="lecture-subtitle">Convolution operator, kernels, CNNs, hierarchy</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/Ebiq6PLAZi6bMnY">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/Ebiq6PLAZi6bMnY">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">05</td>
-          <td class="week-num">11.11.2025</td>
-          <td>
-            <div class="lecture-title">Convolutional Neural Networks - Part II</div>
-            <div class="lecture-subtitle">LeNet, ImageNet, AlexNet, ZFNet, VGGNet, ResNet, guided backpropagation</div>
-          </td>
+          <td class="week-num">05</td><td class="week-num">11.11.2025</td>
+          <td><div class="lecture-title">Convolutional Neural Networks — Part II</div><div class="lecture-subtitle">LeNet, ImageNet, AlexNet, ZFNet, VGGNet, ResNet, guided backpropagation</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/eKKJXKYMWsiELKm">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/eKKJXKYMWsiELKm">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">06</td>
-          <td class="week-num">18.11.2025</td>
-          <td>
-            <div class="lecture-title">Sequential Modelling</div>
-            <div class="lecture-subtitle">Introduction, RNNs, LSTMs, GRU</div>
-          </td>
+          <td class="week-num">06</td><td class="week-num">18.11.2025</td>
+          <td><div class="lecture-title">Sequential Modelling</div><div class="lecture-subtitle">Introduction, RNNs, LSTMs, GRU</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/z4K8nnti8TY67kD">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/z4K8nnti8TY67kD">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">06</td>
-          <td class="week-num">20.11.2025</td>
-          <td>
-            <div class="lecture-title">Advances in Sequential Modelling</div>
-            <div class="lecture-subtitle">Seq2Seq, xLSTM, SSMs, Mamba</div>
-          </td>
+          <td class="week-num">06</td><td class="week-num">20.11.2025</td>
+          <td><div class="lecture-title">Advances in Sequential Modelling</div><div class="lecture-subtitle">Seq2Seq, xLSTM, SSMs, Mamba</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/qtZSWKnMigYEYro">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/qtZSWKnMigYEYro">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">06</td>
-          <td class="week-num">20.10.2025</td>
-          <td>
-            <div class="lecture-title">Assignment II — Neural Networks and Sequential Models</div>
-          </td>
+          <td class="week-num">06</td><td class="week-num">20.11.2025</td>
+          <td><div class="lecture-title">Assignment II — Neural Networks and Sequential Models</div></td>
           <td><span class="tag tag-project">Assignment</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="#">PDF</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="#">PDF</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">07</td>
-          <td class="week-num">27.11.2025</td>
-          <td>
-            <div class="lecture-title">Transformers - Part I</div>
-            <div class="lecture-subtitle">Attention Mechanism, Transformers</div>
-          </td>
+          <td class="week-num">07</td><td class="week-num">27.11.2025</td>
+          <td><div class="lecture-title">Transformers — Part I</div><div class="lecture-subtitle">Attention Mechanism, Transformers</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/LKkWqmXwaMgqk6F">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/LKkWqmXwaMgqk6F">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">07</td>
-          <td class="week-num">04.12.2025</td>
-          <td>
-            <div class="lecture-title">Transformers - Part II</div>
-            <div class="lecture-subtitle">Attention decoder, language modelling, GPT family, LoRA, RLHF, vision transformers</div>
-          </td>
+          <td class="week-num">07</td><td class="week-num">04.12.2025</td>
+          <td><div class="lecture-title">Transformers — Part II</div><div class="lecture-subtitle">Attention decoder, language modelling, GPT family, LoRA, RLHF, vision transformers</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/afaEGJJkDjtyFWk">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/afaEGJJkDjtyFWk">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">08</td>
-          <td class="week-num">08.12.2025</td>
-          <td>
-            <div class="lecture-title">Variational Autoencoder- Part I</div>
-            <div class="lecture-subtitle">Generative models, autoencoders, variational autoencoders, ß-VAEs, masked autoencoders</div>
-          </td>
+          <td class="week-num">08</td><td class="week-num">08.12.2025</td>
+          <td><div class="lecture-title">Generative Modelling — Part I</div><div class="lecture-subtitle">Generative models, autoencoders, variational autoencoders, β-VAEs, masked autoencoders</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/smMDgLReAKANgoB">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/smMDgLReAKANgoB">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">06</td>
-          <td class="week-num">08.12.2025</td>
-          <td>
-            <div class="lecture-title">Assignment III — Variational Autoencoder</div>
-          </td>
+          <td class="week-num">08</td><td class="week-num">08.12.2025</td>
+          <td><div class="lecture-title">Assignment III — Variational Autoencoder</div></td>
           <td><span class="tag tag-project">Assignment</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="#">PDF</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="#">PDF</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">08</td>
-          <td class="week-num">18.12.2025</td>
-          <td>
-            <div class="lecture-title">Variational Autoencoder- Part II</div>
-            <div class="lecture-subtitle">GANs, mode collapse, conditional GANs, DCGANs, applications </div>
-          </td>
+          <td class="week-num">08</td><td class="week-num">18.12.2025</td>
+          <td><div class="lecture-title">Generative Modelling — Part II</div><div class="lecture-subtitle">GANs, mode collapse, conditional GANs, DCGANs, applications</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/YZRrmES3nFkcaTo">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/YZRrmES3nFkcaTo">Slides</a></div></td>
         </tr>
         <tr>
-          <td class="week-num">09</td>
-          <td class="week-num">15.01.2026</td>
-          <td>
-            <div class="lecture-title">Diffusion Models</div>
-            <div class="lecture-subtitle">Forwared and reverse diffusion, training, applications </div>
-          </td>
+          <td class="week-num">09</td><td class="week-num">15.01.2026</td>
+          <td><div class="lecture-title">Diffusion Models</div><div class="lecture-subtitle">Forward and reverse diffusion, training, applications</div></td>
           <td><span class="tag tag-lecture">Lecture</span></td>
-          <td>
-            <div class="materials-links">
-              <a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/S8DPxBs5kDPLENr">Slides</a>
-            </div>
-          </td>
+          <td><div class="materials-links"><a class="mat-link" href="https://cloud.cps.unileoben.ac.at/index.php/s/S8DPxBs5kDPLENr">Slides</a></div></td>
         </tr>
       </tbody>
     </table>
 
+    <!-- ── EVALUATION ── -->
+    <div class="section-heading" id="evaluation">Course Evaluation — WS 2025/26</div>
+
+    <div class="eval-summary">
+      <div class="eval-score-badge">
+        <div class="eval-score-num">1.1</div>
+        <div class="eval-score-label">Average<br>(best: 1)</div>
+      </div>
+      <div class="eval-desc">
+        End-of-semester student evaluation conducted via the university's official feedback system.
+        Grades run from <strong>1 (very good)</strong> to <strong>4 (unsatisfactory)</strong>.
+        Results are based on responses from <strong>27 enrolled students</strong>.
+        The course received an outstanding average of <strong>1.1</strong>, with
+        no student rating below 2.
+      </div>
+    </div>
+
+    <div class="eval-card">
+      <div class="eval-card-title">
+        Overall Satisfaction
+        <span class="eval-avg-tag">Avg. 1.1 &nbsp;·&nbsp; best: 1</span>
+      </div>
+      <div class="eval-bar-track">
+        <div class="eval-bar-seg seg-1" style="width: 85.7%;">85.7%</div>
+        <div class="eval-bar-seg seg-2" style="width: 14.3%;">14.3%</div>
+      </div>
+      <div class="eval-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#2a7abf;"></div>1 — Very good &nbsp;(85.7%)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e07b1a;"></div>2 — Good &nbsp;(14.3%)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3a9a4a;"></div>3 — Satisfactory &nbsp;(0%)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#cc3a2a;"></div>4 — Unsatisfactory &nbsp;(0%)</div>
+      </div>
+    </div>
+
+    <p class="eval-note">Source: Official university course feedback system, WS 2025/26.</p>
+
   </main>
 
-  <!-- Sidebar -->
   <aside class="sidebar">
 
-    <!-- Course Info -->
     <div class="sidebar-card">
       <div class="sidebar-card-header"><h3>Course Info</h3></div>
       <div class="sidebar-card-body">
         <div class="info-row"><span class="info-label">Course #</span><span class="info-value">190.017</span></div>
         <div class="info-row"><span class="info-label">Credits</span><span class="info-value">6 units</span></div>
-        <div class="info-row"><span class="info-label">Meeting</span><span class="info-value">Tue &amp; Thu, 10:00-12:00</span></div>
+        <div class="info-row"><span class="info-label">Meeting</span><span class="info-value">Tue &amp; Thu, 10:00–12:00</span></div>
         <div class="info-row"><span class="info-label">Location</span><span class="info-value">SR HDD [22]</span></div>
-        <div class="info-row"><span class="info-label">Semester</span><span class="info-value">WS2025/26</span></div>
+        <div class="info-row"><span class="info-label">Semester</span><span class="info-value">WS 2025/26</span></div>
         <div class="info-row"><span class="info-label">Enrollment</span><span class="info-value">27</span></div>
-        <div class="info-row"><span class="info-label">Discussion</span><span class="info-value"><a href="https://moodle.unileoben.ac.at" style="color: var(--red-accent);">Moodle</a></span></div>
+        <div class="info-row"><span class="info-label">Discussion</span><span class="info-value"><a href="https://moodle.unileoben.ac.at" style="color:var(--red-accent);">Moodle</a></span></div>
       </div>
     </div>
 
-    <!-- Grading -->
     <div class="sidebar-card">
       <div class="sidebar-card-header"><h3>Grading</h3></div>
       <div class="sidebar-card-body">
         <div class="grade-bar-wrap">
           <div class="grade-label"><span>Practical Exercise (×3)</span><span class="grade-pct">30%</span></div>
-          <div class="grade-bar"><div class="grade-bar-fill" style="width: 30%; background: var(--navy);"></div></div>
+          <div class="grade-bar"><div class="grade-bar-fill" style="width:30%;background:var(--navy);"></div></div>
         </div>
         <div class="grade-bar-wrap">
           <div class="grade-label"><span>Final Exam</span><span class="grade-pct">70%</span></div>
-          <div class="grade-bar"><div class="grade-bar-fill" style="width: 70%; background: var(--gold);"></div></div>
+          <div class="grade-bar"><div class="grade-bar-fill" style="width:70%;background:var(--gold);"></div></div>
         </div>
+      </div>
     </div>
 
-
-    <!-- Prerequisites -->
     <div class="sidebar-card">
       <div class="sidebar-card-header"><h3>Prerequisites</h3></div>
       <div class="sidebar-card-body">
@@ -849,40 +533,39 @@
       </div>
     </div>
 
-    <!-- Textbooks -->
     <div class="sidebar-card" id="resources">
       <div class="sidebar-card-header"><h3>Textbooks &amp; References</h3></div>
       <div class="sidebar-card-body">
         <div class="book-item">
-          <div class="book-spine" style="background: #1a3a6a;"></div>
+          <div class="book-spine" style="background:#1a3a6a;"></div>
           <div>
             <div class="book-info-title">Deep Learning</div>
             <div class="book-authors">Goodfellow, Bengio, Courville (2016)</div>
-            <div class="book-label" style="color: var(--gold);">★ Primary</div>
+            <div class="book-label" style="color:var(--gold);">★ Primary</div>
           </div>
         </div>
         <div class="book-item">
-          <div class="book-spine" style="background: #5a2a1a;"></div>
+          <div class="book-spine" style="background:#5a2a1a;"></div>
           <div>
             <div class="book-info-title">Understanding Deep Learning</div>
             <div class="book-authors">Prince (2023) — free PDF</div>
-            <div class="book-label" style="color: var(--navy);">Supplemental</div>
+            <div class="book-label" style="color:var(--navy);">Supplemental</div>
           </div>
         </div>
         <div class="book-item">
-          <div class="book-spine" style="background: #1a5a2a;"></div>
+          <div class="book-spine" style="background:#1a5a2a;"></div>
           <div>
             <div class="book-info-title">Mathematics for Machine Learning</div>
             <div class="book-authors">Deisenroth, Faisal, Ong (2020)</div>
-            <div class="book-label" style="color: var(--navy);">Reference</div>
+            <div class="book-label" style="color:var(--navy);">Reference</div>
           </div>
         </div>
         <div class="book-item">
-          <div class="book-spine" style="background: #4a1a5a;"></div>
+          <div class="book-spine" style="background:#4a1a5a;"></div>
           <div>
             <div class="book-info-title">Pattern Recognition &amp; Machine Learning</div>
             <div class="book-authors">Bishop (2006)</div>
-            <div class="book-label" style="color: var(--navy);">Reference</div>
+            <div class="book-label" style="color:var(--navy);">Reference</div>
           </div>
         </div>
       </div>
@@ -891,7 +574,6 @@
   </aside>
 </div>
 
-<!-- Footer -->
 <footer>
   <div class="footer-left">
     Advanced Machine &amp; Deep Learning
